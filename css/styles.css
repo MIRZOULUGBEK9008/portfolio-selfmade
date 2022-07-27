@@ -16,12 +16,13 @@
   /* SHADOWS  */
   --shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   --shadow-card: 0px 15px 20px -5px rgb(13 113 130 / 15%);
+  --shadow-link: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 
   /* TRANSITION  */
   --color: color 0.3s ease-in;
   --bg: background-color 0.3s ease-in;
   --opacity: opacity 0.3s ease-in;
-  --transform: transform 0.2s ease;
+  --box-shadow: box-shadow 0.2s ease;
 }
 
 .dark {
@@ -255,12 +256,16 @@ img {
   border-radius: 7px;
   background-color: transparent;
   color: var(--black);
-  transition: var(--transform);
+  transition: var(--box-shadow);
   cursor: pointer;
 }
 
+.toggler:hover {
+  box-shadow: var(--shadow-link);
+}
+
 .toggler:active {
-  transform: scale(0.9);
+  opacity: 0.6;
 }
 
 /* VISUALLY-HIDDEN  */
@@ -287,11 +292,16 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: var(--white);
-  box-shadow: var(--shadow);
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 500;
+  transition: var(--box-shadow);
+}
+
+.site-header--scroll {
+  box-shadow: var(--shadow);
 }
 
 .site-header__container {
@@ -314,6 +324,11 @@ img {
   object-fit: cover;
   border-radius: 15%;
   margin-right: 50px;
+  opacity: 1;
+}
+
+.site-header__img--none {
+  display: none;
 }
 
 .site-header__content {
@@ -333,12 +348,16 @@ img {
   margin: 0;
   font-size: 25px;
   line-height: 33px;
-  font-weight: 300;
+  font-weight: 100;
 }
 
 .site-header__link-wrapper {
   display: flex;
   padding-top: 20px;
+}
+
+.site-header__link-wrapper--none {
+  display: none;
 }
 
 .site-header__link {
@@ -347,11 +366,11 @@ img {
   text-decoration: none;
   background-color: var(--link);
   color: #fff;
-  transition: var(--transform);
+  transition: box-shadow 0.2s ease;
 }
 
 .site-header__link:hover {
-  transform: scale(0.9);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 .site-header__link:active {
