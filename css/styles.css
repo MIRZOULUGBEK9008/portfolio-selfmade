@@ -21,6 +21,7 @@
   --color: color 0.3s ease-in;
   --bg: background-color 0.3s ease-in;
   --opacity: opacity 0.3s ease-in;
+  --transform: transform 0.2s ease;
 }
 
 .dark {
@@ -254,7 +255,7 @@ img {
   border-radius: 7px;
   background-color: transparent;
   color: var(--black);
-  transition: transform 0.3s ease;
+  transition: var(--transform);
   cursor: pointer;
 }
 
@@ -343,8 +344,19 @@ img {
 .site-header__link {
   padding: 5px;
   border-radius: 5px;
+  text-decoration: none;
   background-color: var(--link);
   color: #fff;
+  transition: var(--transform);
+}
+
+.site-header__link:hover {
+  transform: scale(0.9);
+}
+
+.site-header__link:active {
+  color: var();
+  opacity: 0.6;
 }
 
 .site-header__link--github {
@@ -353,15 +365,6 @@ img {
 
 .site-header__link--telegram {
   background-color: #229ed9;
-}
-
-.site-header__link:active {
-  color: var();
-  opacity: 0.6;
-}
-
-.site-header__link:hover {
- text-decoration: none;
 }
 
 .site-header__link:not(:last-child) {
