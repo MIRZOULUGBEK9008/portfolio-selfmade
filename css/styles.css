@@ -230,7 +230,7 @@ img {
 
 /* FOCUS-STYLES  */
 *:focus {
-  outline: 3px dashed var(black);
+  outline: 3px dashed var(--black);
   outline-offset: 3px;
 }
 
@@ -280,6 +280,8 @@ img {
   overflow: hidden;
 }
 
+
+/* SCROLL-TOP  */
 .scroll-site-top {
   display: none;
   position: fixed;
@@ -300,6 +302,10 @@ img {
 
 .scroll-site-top:active {
   opacity: 0.8;
+}
+
+.scroll-site-top:focus {
+  outline: none;
 }
 
 .scroll-site-top svg {
