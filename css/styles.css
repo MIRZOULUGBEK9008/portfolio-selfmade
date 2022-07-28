@@ -344,7 +344,6 @@ img {
 .site-header__img-content-wrapper {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
   margin-right:  auto;
   padding-right: 30px;
 }
