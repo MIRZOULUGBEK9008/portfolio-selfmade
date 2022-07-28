@@ -462,7 +462,7 @@ img {
   object-position: top;
 }
 
-.projets__inner {
+.projects__inner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
