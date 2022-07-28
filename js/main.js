@@ -10,22 +10,25 @@ const modifiers = {
 
 const elLoader = document.querySelector(".lds-spinner-wrapper"),
 theme = localStorage.getItem("theme", "dark"),
-darkModeToggle = document.querySelector(".js-toggle"),
-siteHeader = document.querySelector(".site-header"),
-siteHeaderImg = document.querySelector(".site-header__img"),
-siteHeaderLinkWrapper = document.querySelector(".site-header__link-wrapper");
+elDarkModeToggle = document.querySelector(".js-toggle"),
+elSiteHeader = document.querySelector(".site-header"),
+elScrollTop = document.querySelector(".js-scroll"),
+elSiteHeaderImg = document.querySelector(".site-header__img"),
+elSiteHeaderLinkWrapper = document.querySelector(".site-header__link-wrapper");
 
 // Add shadow
 window.addEventListener("scroll", function() {
   let element = window.scrollY;
   if (element > 0) {
-    siteHeader.classList.add(modifiers.scroll);
-    siteHeaderImg.classList.add(modifiers.img);
-    siteHeaderLinkWrapper.classList.add(modifiers.link);
+    elSiteHeader.classList.add(modifiers.scroll);
+    elSiteHeaderImg.classList.add(modifiers.img);
+    elSiteHeaderLinkWrapper.classList.add(modifiers.link);
+    elScrollTop.classList.add("scroll-site-top--block");
   } else {
-    siteHeader.classList.remove(modifiers.scroll);
-    siteHeaderImg.classList.remove(modifiers.img);
-    siteHeaderLinkWrapper.classList.remove(modifiers.link);
+    elSiteHeader.classList.remove(modifiers.scroll);
+    elSiteHeaderImg.classList.remove(modifiers.img);
+    elSiteHeaderLinkWrapper.classList.remove(modifiers.link);
+    elScrollTop.classList.remove("scroll-site-top--block");
   }
 });
 
@@ -39,24 +42,24 @@ document.addEventListener("DOMContentLoaded", function(){
   }, 1300);
   if (theme === "dark") {
     document.body.classList.add(modifiers.dark);
-    darkModeToggle.textContent = modifiers.white;
+    elDarkModeToggle.textContent = modifiers.white;
   } else {
     document.body.classList.remove(modifiers.dark);
-    darkModeToggle.textContent = modifiers.black;
+    elDarkModeToggle.textContent = modifiers.black;
   }
 });
 
 // Toggle
-darkModeToggle.addEventListener("click", function () {
+elDarkModeToggle.addEventListener("click", function () {
   document.body.classList.toggle(modifiers.dark);
   if (document.body.classList.contains(modifiers.dark)) {
     localStorage.setItem("theme", "dark");
   } else {
     localStorage.setItem("theme", "light");
   }
-  if (darkModeToggle.textContent === modifiers.black) {
-    darkModeToggle.textContent = modifiers.white;
+  if (elDarkModeToggle.textContent === modifiers.black) {
+    elDarkModeToggle.textContent = modifiers.white;
   } else {
-    darkModeToggle.textContent = modifiers.black;
+    elDarkModeToggle.textContent = modifiers.black;
   }
 });
