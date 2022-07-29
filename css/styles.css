@@ -355,7 +355,6 @@ img {
   object-fit: cover;
   border-radius: 15%;
   margin-right: 50px;
-  opacity: 1;
 }
 
 .site-header__img--none {
@@ -373,6 +372,11 @@ img {
   font-family: var(--mono);
   font-size: 30px;
   line-height: 45px;
+  font-style: normal;
+}
+
+.site-header__text i {
+  font-style: normal;
 }
 
 .site-header__number {
@@ -645,5 +649,19 @@ img {
 @media only screen and (max-width: 505px) {
   .site-header__link {
     font-size: 15px;
+  }
+}
+
+/* MAX-479px */
+@media only screen and (max-width: 479px) {
+  .site-header__img {
+    min-width: 125px;
+    min-height: 125px;
+    margin-left: 0;
+    order: -1;
+  }
+
+  .site-header__text i {
+    display: none;
   }
 }
