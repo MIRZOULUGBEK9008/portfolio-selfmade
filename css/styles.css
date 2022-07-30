@@ -218,8 +218,6 @@ body {
   line-height: 30px;
   padding: 0;
   margin: 0;
-  transition: var(--bg),
-  var(--color);
 }
 
 img {
@@ -247,7 +245,7 @@ img {
 
 /* TOGGLER  */
 .toggler {
-  display: block;
+  display: none;
   border: 2px solid var(--black);
   padding: 7px;
   min-width: 150px;
@@ -258,6 +256,10 @@ img {
   color: var(--black);
   transition: var(--box-shadow);
   cursor: pointer;
+}
+
+.toggler--block {
+  display: block;
 }
 
 .toggler:hover {
@@ -318,6 +320,27 @@ img {
   flex-grow: 1;
 }
 
+/* LOGO   */
+.logo {
+  display: none;
+  flex-shrink: 0;
+}
+
+.logo--block {
+  display: flex;
+}
+
+.site-header__logo {
+  transform: rotate(45deg);
+  margin-right: auto;
+}
+
+.logo__img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
 
 /* SITE-HEADER  */
 .site-header {
@@ -344,46 +367,36 @@ img {
 .site-header__img-content-wrapper {
   display: flex;
   align-items: center;
-  margin-right:  auto;
-  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header__img-content-wrapper--none {
+  display: none;
 }
 
 .site-header__img {
   display: block;
-  min-width: 150px;
+  width: 150px;
   height: 150px;
   object-fit: cover;
-  border-radius: 15%;
+  border-radius: 20%;
   margin-right: 50px;
-}
-
-.site-header__img--none {
-  display: none;
-}
-
-.site-header__content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .site-header__text {
   margin: 0;
   font-family: var(--mono);
-  font-size: 30px;
-  line-height: 45px;
-  font-style: normal;
-}
-
-.site-header__text i {
-  font-style: normal;
-}
-
-.site-header__number {
   font-size: 25px;
-  line-height: 33px;
+  line-height: 37px;
+  font-style: normal;
+}
+
+.site-header__project-name {
+  margin: 0;
+  font-size: 20px;
+  line-height: 30px;
   font-weight: 100;
-  text-decoration: none;
   color: var(--black);
 }
 
@@ -429,19 +442,48 @@ img {
 }
 
 .site-header__link--phone {
-  display: none;
+  display: block;
   background-color: #70c370;
+}
+
+
+/* SOCIAL  */
+.social {
+  display: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social__item {
+  flex-shrink: 0;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__link {
+  display: flex;
+}
+
+.social__img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 
 /* PROJECTS  */
 .section-projects {
   padding-top: 250px;
-  padding-bottom: 125px;
+  padding-bottom: 100px;
 }
 
 .section-projects__container {
-  max-width: 1000px;
+  max-width: 800px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -538,166 +580,89 @@ img {
 }
 
 
-/* MEDIA-QUERY  */
-@media only screen and (max-width: 933px) {
-  .site-header__text {
-    font-size: 28px;
-  }
-
-  .site-header__number {
-    display: none;
-  }
-
-  .site-header__link--phone {
-    display: block;
-  }
-}
-
-/* MAX-900px */
-@media only screen and (max-width: 900px) {
-  .site-header__link-wrapper {
-    padding-top: 10px;
+/* MAX-670px */
+@media  (max-width: 670px) {
+  .social {
+    display: flex;
   }
 
   .site-header__img-content-wrapper {
-    padding-right: 0;
-  }
-
-  .toggler {
-    min-width: 100px;
-  }
-}
-
-/* MAX-860px */
-@media only screen and (max-width: 860px) {
-  .toggler {
-    margin-left: 30px;
-  }
-}
-
-/* MAX-800px */
-@media only screen and (max-width: 800px) {
-  .site-header__container {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .site-header__img-content-wrapper {
-    margin-bottom: 20px;
-    margin-right: 0;
-    justify-content: space-between;
-  }
-
-  .site-header__img {
-    margin-right: 0;
-    margin-left: 50px;
-    order: 2;
-  }
-
-  .toggler {
-    margin-left: 0;
-  }
-
-}
-
-/* MAX-570px */
-@media only screen and (max-width: 570px) {
-  .site-header__img-content-wrapper {
-    flex-direction: column;
-  }
-
-  .site-header__img {
-    order: -1;
-    margin-left: 0;
-  }
-
-  .site-header__link-wrapper {
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* MAX-520px */
-@media only screen and (max-width: 520px) {
-  .site-header__img-content-wrapper {
-    flex-direction: row;
-  }
-
-  .site-header__img {
-    order: 2;
-    margin-right: 0;
-    margin-left: 30px;
-  }
-
-  .site-header__text {
-    line-height: normal;
-    font-size: 25px;
-  }
-
-  .site-header__link-wrapper {
-    margin: 0;
-  }
-
-  .site-header__link {
-    font-size: 17px;
-  }
-
-  .site-header__link:not(:last-child) {
-    margin-right: 15px;
-  }
-}
-
-/* MAX-505px */
-@media only screen and (max-width: 505px) {
-  .site-header__link {
-    font-size: 15px;
-  }
-}
-
-/* MAX-479px */
-@media only screen and (max-width: 479px) {
-  .site-header__content {
-    flex-direction: row;
     align-items: center;
   }
 
   .site-header__img {
-    min-width: 100px;
-    min-height: 100px;
-    margin-right: 20px;
-    margin-left: 0;
-    order: -1;
-    flex-shrink: 0;
+    margin-right: 30px;
   }
 
-  .site-header__text i {
-    display: none;
+  .site-header__text {
+    width: 220px;
+    font-size: 23px;
+    line-height: 30px;
+  }
+
+  .site-header__project-name {
+    font-size: 16px;
   }
 
   .site-header__link-wrapper {
-    flex-direction: column;
+    display: none;
   }
 
-  .site-header__link:not(:last-child) {
+  .section-projects {
+    padding-top: 180px;
+    padding-bottom: 50px;
+  }
+
+}
+
+/* MAX-470px */
+@media  (max-width: 470px) {
+  .site-header__img {
+    margin-left: 15px;
     margin-right: 0;
-    margin-bottom: 10px;
+    order: 2;
+  }
+
+  .projects__inner {
+    padding: 25px;
   }
 
   .projects__title {
-    font-size: 25px;
+    font-size: 24px;
+    line-height: 1;
     margin-bottom: 10px;
   }
 
   .projects__info {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 1.2;
   }
 }
 
-/* MAX-450px */
-@media only screen and (max-width: 450px) {
+/* MAX-436px */
+@media  (max-width: 436px) {
+  .site-header__img {
+    width: 90px;
+    height: 90px;
+    margin-left: 0;
+    margin-right: 10px;
+    order: -1;
+  }
+
   .site-header__text {
-    display: none;
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .site-header__project-name {
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .social__img {
+    width: 25px;
+    height: 25px;
   }
 }

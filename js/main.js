@@ -4,8 +4,10 @@ const modifiers = {
   white: "oq",
   black: "qora",
   scroll: "site-header--scroll",
-  img: "site-header__img--none",
-  link: "site-header__link-wrapper--none"
+  content: "site-header__img-content-wrapper--none",
+  toggler: "toggler--block",
+  scrollTop: "scroll-site-top--block",
+  logo: "logo--block"
 }
 
 const elLoader = document.querySelector(".lds-spinner-wrapper"),
@@ -13,22 +15,24 @@ theme = localStorage.getItem("theme", "dark"),
 elDarkModeToggle = document.querySelector(".js-toggle"),
 elSiteHeader = document.querySelector(".site-header"),
 elScrollTop = document.querySelector(".js-scroll"),
-elSiteHeaderImg = document.querySelector(".site-header__img"),
-elSiteHeaderLinkWrapper = document.querySelector(".site-header__link-wrapper");
+elLogo = document.querySelector(".logo"),
+elSiteHeaderContentWrapper = document.querySelector(".site-header__img-content-wrapper");
 
 // Add shadow
 window.addEventListener("scroll", function() {
   let element = window.scrollY;
   if (element > 0) {
     elSiteHeader.classList.add(modifiers.scroll);
-    elSiteHeaderImg.classList.add(modifiers.img);
-    elSiteHeaderLinkWrapper.classList.add(modifiers.link);
-    elScrollTop.classList.add("scroll-site-top--block");
+    elSiteHeaderContentWrapper.classList.add(modifiers.content);
+    elLogo.classList.add(modifiers.logo);
+    elScrollTop.classList.add(modifiers.scrollTop);
+    elDarkModeToggle.classList.add(modifiers.toggler);
   } else {
     elSiteHeader.classList.remove(modifiers.scroll);
-    elSiteHeaderImg.classList.remove(modifiers.img);
-    elSiteHeaderLinkWrapper.classList.remove(modifiers.link);
-    elScrollTop.classList.remove("scroll-site-top--block");
+    elSiteHeaderContentWrapper.classList.remove(modifiers.content);
+    elLogo.classList.remove(modifiers.logo);
+    elScrollTop.classList.remove(modifiers.scrollTop);
+    elDarkModeToggle.classList.remove(modifiers.toggler);
   }
 });
 
