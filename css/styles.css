@@ -81,7 +81,7 @@
   height: 100%;
   z-index: 999;
   background-color: var(--light-gray);
-  transition: transform 0.4s ease;
+  transition: transform 0.6s ease;
 }
 
 .lds-spinner-wrapper--opacity {
