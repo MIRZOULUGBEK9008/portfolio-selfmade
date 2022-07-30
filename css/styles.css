@@ -43,12 +43,11 @@
   height: 100%;
   z-index: 999;
   background-color: var(--light-gray);
-  opacity: 1;
-  transition: var(--opacity);
+  transition: transform 0.4s ease;
 }
 
 .lds-spinner-wrapper--opacity {
-  opacity: 0;
+  transform: translateY(-100%);
   overflow: hidden;
 }
 
