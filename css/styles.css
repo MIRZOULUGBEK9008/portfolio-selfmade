@@ -8,7 +8,7 @@
 
   /* COLOR */
   --white: #fff;
-  --light-gray: #f9f9f9;
+  --light-gray: #eeecec;
   --black: #111517;
   --gray: rgba(132, 132, 132, 1);
   --dark-blue: #2b3844;
@@ -27,10 +27,48 @@
 
 .dark {
   --white: #2b3844;
-  --light-gray: #202c36;
+  --light-gray: #1c252c;
   --black: #fff;
   --dark-blue: var(--black);
   --link: var(--dark-blue);
+}
+
+
+/* FONT-FACE  */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Medium.woff2") format("woff2"),
+  url("/fonts/JetBrainsMono-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono NL";
+  src: url("/fonts/JetBrainsMonoNL-Thin.woff2") format("woff2"),
+  url("/fonts/JetBrainsMonoNL-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono NL";
+  src: url("/fonts/JetBrainsMonoNL-Regular.woff2") format("woff2"),
+  url("/fonts/JetBrainsMonoNL-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("/fonts/Rubik-Regular.woff2") format("woff2"),
+  url("/fonts/Rubik-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 
@@ -140,44 +178,6 @@
 .lds-spinner div:nth-child(12) {
   transform: rotate(330deg);
   animation-delay: 0s;
-}
-
-
-/* FONT-FACE  */
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/JetBrainsMono-Medium.woff2") format("woff2"),
-  url("/fonts/JetBrainsMono-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrains Mono NL";
-  src: url("/fonts/JetBrainsMonoNL-Thin.woff2") format("woff2"),
-  url("/fonts/JetBrainsMonoNL-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "JetBrains Mono NL";
-  src: url("/fonts/JetBrainsMonoNL-Regular.woff2") format("woff2"),
-  url("/fonts/JetBrainsMonoNL-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Rubik";
-  src: url("/fonts/Rubik-Regular.woff2") format("woff2"),
-  url("/fonts/Rubik-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 
@@ -688,8 +688,8 @@ img {
 /* MAX-350px */
 @media  (max-width: 350px) {
   .site-header {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .logo__img {
@@ -730,7 +730,11 @@ img {
   }
 
   .projects__title {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  .projects__info {
+    font-size: 14px;
   }
 }
 
