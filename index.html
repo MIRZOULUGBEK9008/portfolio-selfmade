@@ -41,10 +41,78 @@
     <div class="container site-header__container">
       <h1 class="visually-hidden">Information about Mirzo Ulugbek</h1>
 
-      <!-- LOGO  -->
-      <a class="logo site-header__logo" href="https://t.me/insightforeveryone" target="_blank" title="Mirzo Ulug'beknig shaxsiy logotipi">
-        <img class="logo__img" src="img/logo.jpg" alt="Mirzo Ulug'beknig shaxsiy logotipi" width="60" height="60" srcset="img/logo.jpg 1x, img/logo@2x.jpg 2x" title="Mirzo Ulug'beknig shaxsiy logotipi">
-      </a>
+
+      <!-- HAMBURGER  -->
+      <section class="hamburger site-header__hamburger">
+
+        <h2 class="visually-hidden">Hamburger mune</h2>
+        <button class="hamburger__bar js-hamburger-toggle" type="button" aria-label="Open projects list">
+          <span class="hamburger__bar-inner">
+            <svg class="hamburger__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+          </span>
+        </button>
+
+        <!-- SITE NAVIGATOR  -->
+        <nav class="sitenav hamburger__sitenav js-hamburger">
+          <ul class="sitenav__list">
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#minimalist">Minimalist</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#myteam">My team</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#ecommerce">Ecommerce</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#easybank">Easybank</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#skilled">Skilled</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#bookmark">Bookmark</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#shortly">Shortly</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#joblist">Job list</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#pricing">Pricing</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#countries">Countries</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#loopstudios">Loopstudios</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#coffeeroasters">Coffeeroasters</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#intro">Intro</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#applewatch">Applewatch</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#article">Article</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#n24">Namanganliklar 24</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#ansormed">Ansormed</a>
+            </li>
+            <li class="sitenav__item">
+              <a class="sitenav__link js-id" tabindex="-1" href="#akademnashr">Akademnashr</a>
+            </li>
+          </ul>
+        </nav>
+
+      </section>
 
 
       <div class="site-header__img-content-wrapper">
@@ -79,7 +147,7 @@
             <!-- PHONE -->
             <li class="social__item">
               <a class="social__link" target="_blank" href="tel:+998976289008">
-                <img class="social__img" src="img/social/phone .svg" alt="Phone" width="45" height="45">
+                <img class="social__img" src="img/social/phone.svg" alt="Phone" width="45" height="45">
               </a>
             </li>
           </ul>
@@ -88,7 +156,10 @@
 
 
       <!-- TOGGLE  -->
-      <button class="toggler js-toggle" type="button">Qora</button>
+      <button class="toggler site-header__toggler js-toggle" type="button">
+        <img class="toggler__img toggler__img--moon toggler__img--active" src="img/moon-solid.svg" alt="Light/Dark mode toggler" width="30" height="30">
+        <img class="toggler__img toggler__img--sun" src="img/sun-solid.svg" alt="Light/Dark mode toggler" width="30" height="30">
+      </button>
     </div>
   </header>
 
@@ -101,7 +172,7 @@
       <ul class="projects">
 
         <!-- MINIMALIST -->
-        <li class="projects__item">
+        <li class="projects__item" id="minimalist">
           <img class="projects__img" src="img/projects/minimalist.jpg" alt="Minimalist" width="1440" height="674" srcset="img/projects/minimalist.jpg 1x, img/projects/minimalist@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Minimalist</h3>
@@ -114,7 +185,7 @@
         </li>
 
         <!-- MY-TEAM -->
-        <li class="projects__item">
+        <li class="projects__item" id="myteam">
           <img class="projects__img" src="img/projects/myteam.jpg" alt="Myteam" width="1440" height="674" srcset="img/projects/myteam.jpg 1x, img/projects/myteam@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">My team</h3>
@@ -127,7 +198,7 @@
         </li>
 
         <!-- ECOMMERCE -->
-        <li class="projects__item">
+        <li class="projects__item" id="ecommerce">
           <img class="projects__img" src="img/projects/ecommerce.jpg" alt="ecommerce" width="1440" height="674" srcset="img/projects/ecommerce.jpg 1x, img/projects/ecommerce@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Ecommerce</h3>
@@ -140,7 +211,7 @@
         </li>
 
         <!-- EASYBANK-->
-        <li class="projects__item">
+        <li class="projects__item" id="easybank">
           <img class="projects__img" src="img/projects/easybank.jpg" alt="Easybank" width="1440" height="674" srcset="img/projects/easybank.jpg 1x, img/projects/easybank@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Easybank</h3>
@@ -153,7 +224,7 @@
         </li>
 
         <!-- SKILLED -->
-        <li class="projects__item">
+        <li class="projects__item" id="skilled">
           <img class="projects__img" src="img/projects/skilled.jpg" alt="Skilled" width="1440" height="674" srcset="img/projects/skilled.jpg 1x, img/projects/skilled@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Skilled</h3>
@@ -166,7 +237,7 @@
         </li>
 
         <!-- BOOKMARK -->
-        <li class="projects__item">
+        <li class="projects__item" id="bookmark">
           <img class="projects__img" src="img/projects/bookmark.jpg" alt="Bookmark" width="1440" height="674" srcset="img/projects/bookmark.jpg 1x, img/projects/bookmark@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Bookmark</h3>
@@ -179,7 +250,7 @@
         </li>
 
         <!-- SHORTLY -->
-        <li class="projects__item">
+        <li class="projects__item" id="shortly">
           <img class="projects__img" src="img/projects/shortly.jpg" alt="Shortly" width="1440" height="674" srcset="img/projects/shortly.jpg 1x, img/projects/shortly@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Shortly</h3>
@@ -192,7 +263,7 @@
         </li>
 
         <!-- JOB-LISTING -->
-        <li class="projects__item">
+        <li class="projects__item" id="joblist">
           <img class="projects__img" src="img/projects/job-listing.jpg" alt="Job list" width="1440" height="674" srcset="img/projects/job-listing.jpg 1x, img/projects/job-listing@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Job list</h3>
@@ -205,7 +276,7 @@
         </li>
 
         <!-- PRICING -->
-        <li class="projects__item">
+        <li class="projects__item" id="pricing">
           <img class="projects__img" src="img/projects/pricing.jpg" alt="Pricing" width="1440" height="674" srcset="img/projects/pricing.jpg 1x, img/projects/pricing@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Pricing</h3>
@@ -218,7 +289,7 @@
         </li>
 
         <!-- COUNTRIES -->
-        <li class="projects__item">
+        <li class="projects__item" id="countries">
           <img class="projects__img" src="img/projects/countries.jpg" alt="Countries" width="1440" height="674" srcset="img/projects/countries.jpg 1x, img/projects/countries@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Countries</h3>
@@ -231,7 +302,7 @@
         </li>
 
         <!-- LOOPSTUDIOS -->
-        <li class="projects__item">
+        <li class="projects__item" id="loopstudios">
           <img class="projects__img" src="img/projects/loopstudios.jpg" alt="Loopstudios" width="1440" height="674" srcset="img/projects/loopstudios.jpg 1x, img/projects/loopstudios@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Loopstudios</h3>
@@ -244,7 +315,7 @@
         </li>
 
         <!-- COFEEROASTERS -->
-        <li class="projects__item">
+        <li class="projects__item" id="coffeeroasters">
           <img class="projects__img" src="img/projects/coffeeroasters.jpg" alt="Coffeeroasters" width="1440" height="674" srcset="img/projects/coffeeroasters.jpg 1x, img/projects/coffeeroasters@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Coffeeroasters</h3>
@@ -257,7 +328,7 @@
         </li>
 
         <!-- INTRO -->
-        <li class="projects__item">
+        <li class="projects__item" id="intro">
           <img class="projects__img" src="img/projects/intro.jpg" alt="Intro" width="1440" height="674" srcset="img/projects/intro.jpg 1x, img/projects/intro@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Intro</h3>
@@ -270,7 +341,7 @@
         </li>
 
         <!-- APPLEWATCH -->
-        <li class="projects__item">
+        <li class="projects__item" id="applewatch">
           <img class="projects__img" src="img/projects/applewatch.jpg" alt="Applewatch" width="1440" height="674" srcset="img/projects/applewatch.jpg 1x, img/projects/applewatch@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Applewatch</h3>
@@ -283,7 +354,7 @@
         </li>
 
         <!-- ARTICLE -->
-        <li class="projects__item">
+        <li class="projects__item" id="article">
           <img class="projects__img" src="img/projects/article.jpg" alt="Article" width="1440" height="674" srcset="img/projects/article.jpg 1x, img/projects/article@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Article</h3>
@@ -296,7 +367,7 @@
         </li>
 
         <!-- N24 -->
-        <li class="projects__item">
+        <li class="projects__item" id="n24">
           <img class="projects__img" src="img/projects/n24.jpg" alt="Namanganliklar 24" width="1440" height="674" srcset="img/projects/n24.jpg 1x, img/projects/n24@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Namanganliklar 24</h3>
@@ -309,7 +380,7 @@
         </li>
 
         <!-- ANSORMED -->
-        <li class="projects__item">
+        <li class="projects__item" id="ansormed">
           <img class="projects__img" src="img/projects/ansormed.jpg" alt="Ansormed" width="1440" height="674" srcset="img/projects/ansormed.jpg 1x, img/projects/ansormed@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Ansormed</h3>
@@ -322,7 +393,7 @@
         </li>
 
         <!-- AKADEMNASHR -->
-        <li class="projects__item">
+        <li class="projects__item" id="akademnashr">
           <img class="projects__img" src="img/projects/akademnashr.jpg" alt="akademnashr" width="1440" height="674" srcset="img/projects/akademnashr.jpg 1x, img/projects/akademnashr@2x.jpg 2x">
           <div class="projects__inner">
             <h3 class="projects__title">Akademnashr</h3>
