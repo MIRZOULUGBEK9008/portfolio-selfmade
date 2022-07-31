@@ -832,16 +832,56 @@ img {
   .projects__info {
     font-size: 14px;
   }
+
+  .projects__link {
+    font-size: 18px;
+  }
 }
 
 /* MAX-301px */
 @media (max-width: 301px) {
   .site-header__text {
-    margin-right: 6px;
     font-size: 16px;
+    margin-bottom: 8px;
   }
 
   .site-header__project-name {
-    margin-bottom: 6px;
+    font-size: 10px;
+  }
+
+  .projects__link {
+    font-size: 16px;
+  }
+}
+
+/* MAX-280px */
+@media (max-width: 280px) {
+  .site-header__text {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .site-header__project-name {
+    display: none;
+  }
+
+  .projects__inner {
+    padding: 20px;
+  }
+
+  .projects__title {
+    font-size: 14px;
+  }
+
+  .projects__info {
+    font-size: 12px;
+  }
+
+  .projects__link {
+    font-size: 14px;
+  }
+
+  .projects__link:not(:last-child) {
+    margin-right: 8px;
   }
 }
