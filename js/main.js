@@ -1,4 +1,4 @@
-// Modifiers
+// MODIFIERS
 const modifiers = {
   dark: "dark",
   active: "toggler__img--active",
@@ -6,9 +6,12 @@ const modifiers = {
   content: "site-header__img-content-wrapper--none",
   toggler: "toggler--block",
   scrollTop: "scroll-site-top--block",
-  block: "hamburger__bar--block"
+  block: "hamburger__bar--block",
+  prev: "back--view"
 }
 
+
+// VARIABLES
 const elLoader = document.querySelector(".lds-spinner-wrapper"),
 theme = localStorage.getItem("theme", "dark"),
 elDarkModeToggle = document.querySelector(".js-toggle"),
@@ -19,9 +22,11 @@ elScrollTop = document.querySelector(".js-scroll"),
 elsId = document.querySelectorAll(".js-id"),
 elHamburger = document.querySelector(".js-hamburger"),
 elHamburgerToggle = document.querySelector(".js-hamburger-toggle"),
-elSiteHeaderContentWrapper = document.querySelector(".site-header__img-content-wrapper");
+elSiteHeaderContentWrapper = document.querySelector(".site-header__img-content-wrapper"),
+elBack = elSiteHeader.querySelector(".js-prev-page");
 
-// Function
+
+// FUNCTION
 function removeActiveAddActive() {
   elDarkModeToggleImgMoon.classList.remove(modifiers.active);
   elDarkModeToggleImgSun.classList.add(modifiers.active);
@@ -32,14 +37,15 @@ function addActiveRemoveActive() {
   elDarkModeToggleImgSun.classList.remove(modifiers.active);
 }
 
-// Loader
+
+// LOADER
 document.addEventListener("DOMContentLoaded", function(){
   setTimeout(function() {
     elLoader.classList.add("lds-spinner-wrapper--opacity");
-  }, 1000);
+  }, 500);
   setTimeout(function() {
     elLoader.classList.add("lds-spinner-wrapper--none");
-  }, 1500);
+  }, 1000);
   if (theme === "dark") {
     document.body.classList.add(modifiers.dark);
     removeActiveAddActive();
@@ -49,7 +55,8 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 });
 
-// Add shadow
+
+// SCROLL
 window.addEventListener("scroll", function() {
   let element = window.scrollY;
   if (element > 0) {
@@ -57,17 +64,28 @@ window.addEventListener("scroll", function() {
     elSiteHeaderContentWrapper.classList.add(modifiers.content);
     elScrollTop.classList.add(modifiers.scrollTop);
     elDarkModeToggle.classList.add(modifiers.toggler);
-    elHamburgerToggle.classList.add(modifiers.block);
+    if (elHamburgerToggle) {
+      elHamburgerToggle.classList.add(modifiers.block);
+    }
+    if (elBack) {
+      elBack.classList.add(modifiers.prev);
+    }
   } else {
     elSiteHeader.classList.remove(modifiers.scroll);
     elSiteHeaderContentWrapper.classList.remove(modifiers.content);
     elScrollTop.classList.remove(modifiers.scrollTop);
     elDarkModeToggle.classList.remove(modifiers.toggler);
-    elHamburgerToggle.classList.remove(modifiers.block);
+    if (elHamburgerToggle) {
+      elHamburgerToggle.classList.remove(modifiers.block);
+    }
+    if (elBack) {
+      elBack.classList.remove(modifiers.prev);
+    }
   }
 });
 
-// Toggle
+
+// TOGGLE
 elDarkModeToggle.addEventListener("click", function () {
   document.body.classList.toggle(modifiers.dark);
   if (document.body.classList.contains(modifiers.dark)) {
@@ -80,15 +98,19 @@ elDarkModeToggle.addEventListener("click", function () {
 });
 
 
-
-// Hamburger
-elHamburgerToggle.addEventListener("click", function () {
-  elHamburger.classList.toggle("hamburger__sitenav--active");
-});
-
-
-elsId.forEach(function (id) {
-  id.addEventListener("click", function () {
+// HAMBURGER
+if (elHamburgerToggle) {
+  elHamburgerToggle.addEventListener("click", function () {
     elHamburger.classList.toggle("hamburger__sitenav--active");
   });
-});
+}
+
+
+// ID
+if (elsId) {
+  elsId.forEach(function (id) {
+    id.addEventListener("click", function () {
+      elHamburger.classList.toggle("hamburger__sitenav--active");
+    });
+  });
+}

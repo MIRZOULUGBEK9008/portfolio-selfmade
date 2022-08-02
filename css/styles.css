@@ -63,11 +63,9 @@
   /* SHADOWS  */
   --shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   --shadow-card: 0px 15px 20px -5px rgb(13 113 130 / 15%);
-  --shadow-link: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 
   /* TRANSITION  */
-  --color: color 0.3s ease-in;
-  --bg: background-color 0.3s ease-in;
+  --transform: transform 0.2s ease;
   --box-shadow: box-shadow 0.2s ease;
 }
 
@@ -103,6 +101,7 @@ body {
   font-family: var(--comfortaa);
   font-size: 18px;
   line-height: 25px;
+  font-weight: 400;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -157,7 +156,7 @@ img {
   padding: 0;
   border: none;
   background-color: transparent;
-  transition: transform 0.2s ease;
+  transition: var(--transform);
   cursor: pointer;
 }
 
@@ -185,6 +184,43 @@ img {
 }
 
 
+/* BACK  */
+.back {
+  display: none;
+  padding: 5px;
+  text-decoration: none;
+  color: var(--black);
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: var(--transform);
+}
+
+.back--view {
+  display: block;
+}
+
+.back:hover {
+  opacity: 0.8;
+}
+
+.back:active {
+  transform: scale(0.9);
+}
+
+.back__inner {
+  display: flex;
+  align-items: center;
+}
+
+.back__icon {
+  margin-right: 7px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  fill: var(--black);
+}
+
 /* VISUALLY-HIDDEN  */
 .visually-hidden {
   position: absolute;
@@ -210,7 +246,6 @@ img {
   height: 50px;
   object-fit: contain;
   border-radius: 50%;
-  transition: var(--opacity);
 }
 
 .scroll-site-top--block {
@@ -329,7 +364,6 @@ img {
 }
 
 .site-header__link:active {
-  color: var();
   opacity: 0.6;
 }
 
@@ -438,10 +472,6 @@ img {
   list-style: none;
 }
 
-.sitenav__item {
-  flex-grow: 1;
-}
-
 .sitenav__item:not(:last-child) {
   margin-bottom: 15px;
 }
@@ -451,12 +481,16 @@ img {
 }
 
 .sitenav__link {
+  text-decoration: none;
+  font-weight: 500;
   color: var(--black);
   display: block;
+  transition: var(--transform);
 }
 
 .sitenav__link:hover {
-  text-decoration: none;
+  color: #229ed9;
+  transform: scale(1.1) translateX(-10px);
 }
 
 .sitenav__link:focus {
