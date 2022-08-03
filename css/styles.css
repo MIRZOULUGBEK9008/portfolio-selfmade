@@ -238,8 +238,8 @@ img {
 .scroll-site-top {
   display: none;
   position: fixed;
-  top: 85%;
-  right: 5%;
+  top: 80%;
+  right: 8%;
   z-index: 50;
   box-shadow: var(--shadow);
   width: 50px;
@@ -853,6 +853,10 @@ img {
   .projects__info {
     text-align: justify;
     font-size: 14px;
+  }
+
+  .projects__link {
+    line-height: 19px;
   }
 }
 
