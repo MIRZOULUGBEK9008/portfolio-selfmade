@@ -815,6 +815,10 @@ img {
   padding-bottom: 50px;
 }
 
+.project-info__time-table__wrapper > i {
+  color: var(--black);
+}
+
 .project-info__challenge-description {
   margin: 0;
 }
