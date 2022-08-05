@@ -58,9 +58,9 @@
   --gray: rgba(132, 132, 132, 1);
   --dark-blue: #2b3844;
   --link: transparent;
-  --link-more: #229ed9;
-  --grayish-light-blue: rgba(51, 50, 61, 0.15);
-  --grayish-dark-blue: #33323D;
+  --link-more: #40a7e3;
+  --light-black: rgba(51, 50, 61, 0.15);
+  --slider: rgba(51, 50, 61, 0.05);
 
   /* SHADOWS  */
   --shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
@@ -78,7 +78,8 @@
   --black: #fff;
   --dark-blue: var(--black);
   --link: var(--dark-blue);
-  --link-more: #d6eaf3;
+  --light-black: rgba(255, 255, 255, 0.3);
+  --slider: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -581,7 +582,6 @@ img {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 25px;
-  font-weight: 600;
   line-height: 32px;
   font-weight: 500;
 }
@@ -841,51 +841,63 @@ img {
 }
 
 .slider__page-title {
+  display: flex;
+  align-items: center;
   position: relative;
   margin: 0;
   width: 50%;
   text-align: left;
-  border-top: 1px solid var(--grayish-light-blue);
-  border-bottom: 1px solid var(--grayish-light-blue);
+  border-top: 1px solid var(--light-black);
+  border-bottom: 1px solid var(--light-black);
+}
+
+.slider__page-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  fill: var(--black);
 }
 
 .slider__page-title--next {
   text-align: right;
-  border-left: 1px solid var(--grayish-light-blue);
+  justify-content: end;
+  border-left: 1px solid var(--light-black);
+}
+
+.slider__page-title--next >
+.slider__point-page-link-wrapper {
+  order: -1;
+}
+
+.slider__point-page-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
 }
 
 .slider__page-link {
   display: flex;
   flex-direction: column;
-  padding: 32px;
-  color: var(--grayish-dark-blue);
+  color: var(--black);
   text-decoration: none;
-  font-family: var(--title-font);
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 25px;
   font-weight: 400;
-  letter-spacing: -0.29px;
 }
 
-.slider__page-link::after {
-  content: "Oldingi loyiha";
-  text-transform: capitalize;
-  font-family: var(--text-font);
-  color: rgba(51, 50, 61, 0.5);
+.slider__point {
+  display: inline-block;
+  order: 2;
+  color: var(--link-more);
   font-size: 16px;
-  line-height: 30px;
-}
-
-.slider__page-link--next::after {
-  content: "Keyingi loyiha";
 }
 
 .slider__page-link:hover.slider__page-link::before {
-  background-color: rgba(51, 50, 61, 0.05);
+  background-color: var(--slider);
 }
 
 .slider__page-link:focus.slider__page-link::before {
-  background-color: rgba(51, 50, 61, 0.05);
+  background-color: var(--slider);
 }
 
 .slider__page-link:active {
