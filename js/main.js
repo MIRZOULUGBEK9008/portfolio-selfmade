@@ -8,7 +8,7 @@ const modifiers = {
   scrollTop: "scroll-site-top--block",
   block: "hamburger__bar--block",
   prev: "back--view"
-}
+};
 
 
 // VARIABLES
@@ -114,5 +114,3 @@ if (elsId) {
     });
   });
 }
-
-
