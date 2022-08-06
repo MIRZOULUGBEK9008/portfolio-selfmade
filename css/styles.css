@@ -535,6 +535,7 @@ img {
 
 .section-projects__description {
   margin: 0;
+  text-align: justify;
 }
 
 .section-projects__description-link {
@@ -1051,6 +1052,10 @@ img {
     height: 20px;
   }
 
+  .section-projects__description {
+    font-size: 14px;
+  }
+
   .section-projects {
     padding-top: 150px;
   }
@@ -1082,6 +1087,10 @@ img {
 
   .site-header__project-name {
     font-size: 10px;
+  }
+
+  .section-projects__description {
+    font-size: 13px;
   }
 
   .projects__item {
