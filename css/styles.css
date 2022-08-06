@@ -591,13 +591,13 @@ img {
   margin-bottom: 20px;
 }
 
-.projects__link-wrapper {
+.project-links {
   display: flex;
   margin-top: auto;
   margin-left: auto;
 }
 
-.projects__link {
+.project-links__link {
   padding: 5px;
   color: #fff;
   font-size: 20px;
@@ -607,28 +607,28 @@ img {
   border-radius: 4px;
 }
 
-.projects__link:hover {
+.project-links__link:hover {
   text-decoration: underline;
 }
 
-.projects__link:not(:last-child) {
+.project-links__link:not(:last-child) {
   margin-right: 20px;
 }
 
-.projects__link--more {
+.project-links__link--more {
   text-decoration: underline;
   color: var(--link-more);
 }
 
-.projects__link--more:hover {
+.project-links__link--more:hover {
   text-decoration: none;
 }
 
-.projects__link--github {
+.project-links__link--github {
   background-color: #171515;
 }
 
-.projects__link--netlify {
+.project-links__link--netlify {
   background-color: #41a5bd;
 }
 
@@ -655,7 +655,6 @@ img {
 }
 
 .lds-spinner {
-  color: official;
   display: inline-block;
   position: relative;
   top: calc(50% - 40px);
@@ -1012,21 +1011,21 @@ img {
     margin-bottom: 5px;
   }
 
-  .projects__link {
+  .project-links__link {
     font-size: 14px;
   }
 
-  .projects__link:not(:last-child) {
+  .project-links__link:not(:last-child) {
     margin-right: 0;
   }
 
-  .projects__link--more {
+  .project-links__link--more {
     margin-right: 0;
     margin-left: 10px;
     order: 3;
   }
 
-  .projects__link--netlify {
+  .project-links__link--netlify {
     margin-left: 10px;
   }
 
@@ -1069,7 +1068,7 @@ img {
     font-size: 14px;
   }
 
-  .projects__link {
+  .project-links__link {
     line-height: 19px;
   }
 }
@@ -1098,7 +1097,7 @@ img {
     line-height: 17px;
   }
 
-  .projects__link {
+  .project-links__link {
     padding: 4px;
     font-size: 12px;
   }
