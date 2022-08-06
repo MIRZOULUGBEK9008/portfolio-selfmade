@@ -777,10 +777,6 @@ img {
   color: var(--black);
 }
 
-.project-info__time {
-  margin-left: 20px;
-}
-
 .project-info__content {
   display: flex;
   flex-direction: column;
@@ -807,6 +803,7 @@ img {
 
 .project-info__part-title {
   font-weight: 600;
+  line-height: 34px;
   margin-top: 0;
   margin-bottom: 20px;
   color: var(--black);
@@ -973,6 +970,61 @@ img {
     padding-bottom: 50px;
   }
 
+  .project-info {
+    padding-top: 200px;
+    padding-bottom: 30px;
+  }
+
+  .project-info__content {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .project-info__title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .project-info__title-time-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .project-info__challenge {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .project-info__part-title {
+    font-size: 25px;
+  }
+
+  .project-info__time-table-wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .project-info__challenge-description {
+    text-align: justify;
+  }
+
+  .slider {
+    padding-top: 30px;
+    padding-bottom: 100px;
+  }
+
+  .slider__point-page-link-wrapper {
+    padding: 20px 15px;
+  }
+
+  .slider__page-link {
+    font-size: 20px;
+  }
+
+  .slider__point {
+    font-size: 11px;
+  }
 }
 
 /* MAX-436px */
@@ -1038,6 +1090,58 @@ img {
   .social__img {
     width: 25px;
     height: 25px;
+  }
+
+  .project-info {
+    padding-top: 170px;
+  }
+
+  .project-info__content {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .project-info__title {
+    font-size: 30px;
+  }
+
+  .project-info__part-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .project-info__title-time-wrapper {
+    margin-bottom: 10px;
+  }
+
+  .project-info__time {
+    font-size: 14px;
+  }
+
+  .project-info__text {
+    font-size: 14px;
+  }
+
+  .project-info__challenge {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .project-info__challenge-description {
+    font-size: 14px;
+  }
+
+  .project-info__time-table-wrapper {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .project-info__time-table-wrapper > i {
+    font-size: 14px;
+  }
+
+  .slider {
+    display: none;
   }
 }
 
