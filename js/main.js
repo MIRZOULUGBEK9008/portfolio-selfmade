@@ -7,7 +7,8 @@ const modifiers = {
   toggler: "toggler--block",
   scrollTop: "scroll-site-top--block",
   block: "hamburger__bar--block",
-  prev: "back--view"
+  prev: "back--view",
+  overflow: "overflow-y"
 };
 
 
@@ -41,11 +42,8 @@ function addActiveRemoveActive() {
 // LOADER
 document.addEventListener("DOMContentLoaded", function(){
   setTimeout(function() {
-    elLoader.classList.add("lds-spinner-wrapper--opacity");
-  }, 500);
-  setTimeout(function() {
     elLoader.classList.add("lds-spinner-wrapper--none");
-  }, 1000);
+  }, 800);
   if (theme === "dark") {
     document.body.classList.add(modifiers.dark);
     removeActiveAddActive();
