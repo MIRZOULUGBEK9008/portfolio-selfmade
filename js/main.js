@@ -1,3 +1,5 @@
+AOS.init({ duration: 500 });
+
 // MODIFIERS
 const modifiers = {
   dark: "dark",
@@ -8,24 +10,24 @@ const modifiers = {
   scrollTop: "scroll-site-top--block",
   block: "hamburger__bar--block",
   prev: "back--view",
-  overflow: "overflow-y"
+  overflow: "overflow-y",
 };
-
 
 // VARIABLES
 const elLoader = document.querySelector(".lds-spinner-wrapper"),
-theme = localStorage.getItem("theme", "dark"),
-elDarkModeToggle = document.querySelector(".js-toggle"),
-elDarkModeToggleImgMoon = document.querySelector(".toggler__img--moon"),
-elDarkModeToggleImgSun = document.querySelector(".toggler__img--sun"),
-elSiteHeader = document.querySelector(".site-header"),
-elScrollTop = document.querySelector(".js-scroll"),
-elsId = document.querySelectorAll(".js-id"),
-elHamburger = document.querySelector(".js-hamburger"),
-elHamburgerToggle = document.querySelector(".js-hamburger-toggle"),
-elSiteHeaderContentWrapper = document.querySelector(".site-header__img-content-wrapper"),
-elBack = elSiteHeader.querySelector(".js-prev-page");
-
+  theme = localStorage.getItem("theme", "dark"),
+  elDarkModeToggle = document.querySelector(".js-toggle"),
+  elDarkModeToggleImgMoon = document.querySelector(".toggler__img--moon"),
+  elDarkModeToggleImgSun = document.querySelector(".toggler__img--sun"),
+  elSiteHeader = document.querySelector(".site-header"),
+  elScrollTop = document.querySelector(".js-scroll"),
+  elsId = document.querySelectorAll(".js-id"),
+  elHamburger = document.querySelector(".js-hamburger"),
+  elHamburgerToggle = document.querySelector(".js-hamburger-toggle"),
+  elSiteHeaderContentWrapper = document.querySelector(
+    ".site-header__img-content-wrapper"
+  ),
+  elBack = elSiteHeader.querySelector(".js-prev-page");
 
 // FUNCTION
 function removeActiveAddActive() {
@@ -38,10 +40,9 @@ function addActiveRemoveActive() {
   elDarkModeToggleImgSun.classList.remove(modifiers.active);
 }
 
-
 // LOADER
-document.addEventListener("DOMContentLoaded", function(){
-  setTimeout(function() {
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
     elLoader.classList.add("lds-spinner-wrapper--none");
   }, 800);
   if (theme === "dark") {
@@ -53,9 +54,8 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 });
 
-
 // SCROLL
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   let element = window.scrollY;
   if (element > 0) {
     elSiteHeader.classList.add(modifiers.scroll);
@@ -82,7 +82,6 @@ window.addEventListener("scroll", function() {
   }
 });
 
-
 // TOGGLE
 elDarkModeToggle.addEventListener("click", function () {
   document.body.classList.toggle(modifiers.dark);
@@ -95,14 +94,12 @@ elDarkModeToggle.addEventListener("click", function () {
   elDarkModeToggleImgSun.classList.toggle(modifiers.active);
 });
 
-
 // HAMBURGER
 if (elHamburgerToggle) {
   elHamburgerToggle.addEventListener("click", function () {
     elHamburger.classList.toggle("hamburger__sitenav--active");
   });
 }
-
 
 // ID
 if (elsId) {
